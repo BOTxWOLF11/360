@@ -1,0 +1,80 @@
+@import "src/Styles/style.scss";
+
+.navbar {
+  position: page;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: $primary-color;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    padding: 1rem;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 3rem;
+      width: auto;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+
+    li {
+      margin: 0 1rem;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    color: $secondary-color;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 0.25rem;
+
+    &:hover {
+      background-color: $secondary-color;
+      color: $primary-color;
+    }
+
+    &.active {
+      background-color: $secondary-color;
+      color: $primary-color;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    color: $secondary-color;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $secondary-color;
+      color: $primary-color;
+    }
+
+    &-logo {
+      height: 1.5rem;
+      width: auto;
+      margin-right: 0.5rem;
+    }
+  }
+}

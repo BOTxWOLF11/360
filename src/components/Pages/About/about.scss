@@ -1,0 +1,44 @@
+@import "src/Styles/style.scss";
+
+.about-page {
+  padding: 50px;
+}
+
+.about-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: justify;
+
+  ul {
+    list-style-type: none;
+  }
+
+  ul li {
+    font-size: 18px;
+    line-height: 18px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  ul li::before {
+    color: $black;
+    content:"\2022";
+    font-size: 26px;
+    font-weight: 700;
+    left: -15px;
+    line-height: 18px;
+    position: absolute;
+    top: 0;
+  }
+}
+
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 20px;
+}
