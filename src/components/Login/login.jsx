@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './login.scss'
+import {NavLink} from 'react-router-dom';
 
 const Login = (props) => {
     const [email, setEmail] = useState('')
@@ -15,22 +16,22 @@ const Login = (props) => {
         setPasswordError('')
 
         if ('' === email) {
-            setEmailError('Please enter your email')
+            setEmailError('Введите Email')
             return
         }
 
         if (!/^[\w-]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
-            setEmailError('Please enter a valid email')
+            setEmailError('Пожалуйста введите корректные данные')
             return
         }
 
         if ('' === password) {
-            setPasswordError('Please enter a password')
+            setPasswordError('Введите пароль')
             return
         }
 
         if (password.length < 7) {
-            setPasswordError('The password must be 8 characters or longer')
+            setPasswordError('Пожалуйста введите корректные данные')
             return
         }
 
@@ -40,17 +41,17 @@ const Login = (props) => {
     return (
         <div className={'mainContainer'}>
             <button className={'backButton'} onClick={() => navigate(-1)}>
-                Back
+                Вернуться
             </button>
 
             <div className={'titleContainer'}>
-                <div>Login</div>
+                <div>Вход</div>
             </div>
             <br />
             <div className={'inputContainer'}>
                 <input
                     value={email}
-                    placeholder="Enter your email here"
+                    placeholder="Введите Email"
                     onChange={(ev) => setEmail(ev.target.value)}
                     className={'inputBox'}
                 />
@@ -60,17 +61,20 @@ const Login = (props) => {
             <div className={'inputContainer'}>
                 <input
                     value={password}
-                    placeholder="Enter your password here"
+                    placeholder="Введите пароль"
                     onChange={(ev) => setPassword(ev.target.value)}
                     className={'inputBox'}
                 />
                 <label className="errorLabel">{passwordError}</label>
             </div>
             <br />
-            <div className={'inputContainer'}>
-                <button className={'inputButton'} type="button" onClick={onButtonClick}>
+            <div className='buttonContainer'>
+                <button className='inputButton' type="button" onClick={onButtonClick}>
                     Войти
                 </button>
+                <NavLink to="/singin" className="SinginButton" activeClassName="selected">
+                    Зарегестрироваться
+                </NavLink>
             </div>
         </div>
     )

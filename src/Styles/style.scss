@@ -10,10 +10,6 @@
   border: none;
   text-decoration: none;
 
-  -webkit-overflow-scrolling: touch; // для плавного скролла в старых версиях ios
-  -webkit-font-smoothing: antialiased; // переопределяем вкшное subpixel-antialiased
-  text-size-adjust: none; // отключаем увеличение текста на мобильных устройствах
-
   font-family: "PT Sans", sans-serif;
 }
 

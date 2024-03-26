@@ -1,0 +1,46 @@
+@import "src/Styles/style.scss";
+
+.ellipsis-text {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.my-table {
+  border: 1px solid #ccc;
+}
+
+.status-tag {
+  padding: 3px 8px;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: 500;
+  text-transform: capitalize;
+  display: inline-block;
+  margin: 0 5px 2px 0;
+  opacity: 0.85;
+}
+
+.status-tag.unresolved {
+  background: #f50;
+}
+
+.status-tag.resolved {
+  background: #52c41a;
+}
+
+.tags-container {
+  text-align: center;
+}
+
+.tag {
+  margin: 0 5px 5px 0;
+  padding: 2px 6px;
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #fff;
+  background: #1890ff;
+  opacity: 0.85;
+}

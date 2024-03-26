@@ -7,8 +7,8 @@ import './style_header.scss'
 
 const Header = () => {
     const location = useLocation()
-    if (location.pathname === '/login') {
-        return null
+    if (location.pathname === '/singin' || location.pathname === '/login' || location.pathname === '/d') {
+        return null;
     }
     return (
         <nav className="navbar">
